@@ -1,0 +1,24 @@
+Qu’est-ce qu’une API RESTful ?
+→ Une API qui respecte les principes REST : bons verbes HTTP, ressources claires, stateless, bons statuts, échange JSON.
+
+Comment notre API respecte REST ?
+→ Bon usage des verbes, des routes, du format JSON, statuts HTTP corrects, architecture sans état.
+
+Pourquoi séparer contrôleur, service, dépôt ?
+→ Pour organiser le code :
+
+Contrôleur = gère les requêtes
+
+Service = logique métier
+
+Dépôt = accès base de données.
+Cela rend l'application plus propre, testable et maintenable.
+
+Comment Spring Boot facilite la création d’API REST ?
+→ Plus besoin de configuration lourde, serveur intégré, dépendances simples, annotations pratiques.
+
+Que changer pour utiliser MySQL/PostgreSQL ?
+→ Ajouter la dépendance JDBC + configurer application.properties (URL, login, mot de passe).
+
+Comment ajouter authentification/autorisation ?
+→ Utiliser Spring Security + JWT pour sécuriser les accès à l'API.

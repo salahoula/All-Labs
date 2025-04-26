@@ -1,0 +1,28 @@
+Comment Thymeleaf aide-t-il à créer du contenu Web dynamique ?
+Thymeleaf est un moteur de template côté serveur pour Java. Il permet de créer des pages HTML dynamiques en insérant directement dans l'HTML des expressions capables d'afficher et de manipuler les données envoyées par Spring Boot.
+
+Il utilise des balises spécifiques (th:text, th:href, th:each, etc.) pour intégrer dynamiquement des objets Java dans la page HTML.
+
+Le gros avantage est que les fichiers HTML restent valides et lisibles même sans serveur (ils peuvent être ouverts directement dans un navigateur en mode statique).
+
+Thymeleaf supporte aussi la liaison automatique avec des formulaires (th:object, th:field), ce qui facilite la gestion des formulaires avec Spring MVC.
+
+ Quel est l’objectif de la @Valid Annotation dans la gestion des formulaires ?
+@Valid est utilisée pour automatiquement valider les données d'un formulaire envoyées au contrôleur.
+
+Comment fonctionne le mécanisme d’attribut flash dans Spring MVC ?
+Les attributs flash (FlashAttributes) sont utilisés pour transférer temporairement des données lors d'une redirection HTTP (redirect:).
+Ils permettent d’envoyer un message ou un objet d'une requête vers une autre, sans l’exposer dans l’URL (contrairement aux RequestParam).
+Les flash attributes sont stockés en session juste pour la prochaine requête puis supprimés automatiquement.
+
+Expliquez l’architecture en couches utilisée dans cette application.
+L'application suit une architecture en couches classique typique de Spring MVC :
+1/Controller: Gérer les requêtes HTTP, appeler le service approprié, passer les données à la vue.
+2/Service	Contient la logique métier (ex: validation supplémentaire, transformations de données).
+3/Model (Entity)	Représente les objets métiers utilisés dans toute l'application (par ex. Student).
+4/View (Thymeleaf)	Génère le HTML dynamique affiché à l’utilisateur.
+
+ Comment étendriez-vous cette application pour utiliser une véritable base de données au lieu d’un stockage en mémoire ?
+ 1/Ajouter une dependances a une base du données a pom.xml.
+ 2/configurer la connexion dans application.properties.
+ 3/créer une base du données ..

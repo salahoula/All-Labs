@@ -1,0 +1,11 @@
+package com.example.Student_portal.service;
+import com.example.Student_portal.model.Student;
+import java.util.List;
+import java.util.Optional;
+public interface StudentService {
+    List<Student> getAllStudents();
+    Optional<Student> getStudentById(Long id);
+    Student saveStudent(Student student);
+    void deleteStudent(Long id);
+}
+
