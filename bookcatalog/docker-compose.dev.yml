@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  book-catalog-app:
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:bookdb
+      - SPRING_DATASOURCE_DRIVER=org.h2.Driver
+    ports:
+      - "8081:8080"
+
+  postgres:
+    ports:
+      - "5433:5432"
